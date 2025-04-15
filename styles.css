@@ -130,7 +130,7 @@ header .container {
 }
 
 .logo img {
-    height: 60px;
+    height: 100px;
     transition: var(--transition);
 }
 
