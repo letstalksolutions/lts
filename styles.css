@@ -130,10 +130,17 @@ header .container {
     padding: 20px 15px;
 }
 
+<<<<<<< HEAD
 ottom: 10px; transition: var(--transition);
 }.logo img {
     height: 80px;
     margin-b
+=======
+.logo img {
+    height: 115px;
+    transition: var(--transition);
+}
+>>>>>>> c54e3078eb4e123821a1051d617cff6b90655e22
 
 .nav-links {
     display: flex;
