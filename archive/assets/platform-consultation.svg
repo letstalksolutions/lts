@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Platform Consultation Icon -->
+  <circle cx="400" cy="300" r="200" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <rect x="300" y="200" width="200" height="200" rx="10" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <path d="M 350 250 L 450 250 M 350 300 L 450 300 M 350 350 L 450 350" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <circle cx="320" cy="220" r="10" fill="#dc2828"/>
+  <circle cx="350" cy="220" r="10" fill="#ffffff"/>
+  <circle cx="380" cy="220" r="10" fill="#ffffff"/>
+</svg>
