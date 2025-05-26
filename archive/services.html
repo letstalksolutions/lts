@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Let's Talk Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to Services page */
+        .services-hero {
+            padding: 150px 0 80px;
+        }
+        
+        .service-detail {
+            padding: 80px 0;
+        }
+        
+        .service-detail:nth-child(odd) {
+            background-color: var(--secondary-color);
+            position: relative;
+        }
+        
+        .service-detail:nth-child(odd):before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: var(--secondary-color);
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        }
+        
+        .service-detail-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .service-detail-content.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .service-detail-text {
+            flex: 1;
+        }
+        
+        .service-detail-image {
+            flex: 1;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        .service-detail-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .service-features {
+            margin: 30px 0;
+        }
+        
+        .service-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .service-feature-icon {
+            color: var(--accent-color);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            position: relative;
+        }
+        
+        .process-steps:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            right: 60px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.2);
+            z-index: 0;
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+        
+        .process-step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .process-step-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .process-step-description {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        @media (max-width: 992px) {
+            .service-detail-content,
+            .service-detail-content.reverse {
+                flex-direction: column;
+            }
+            
+            .service-detail-image {
+                max-width: 100%;
+                margin-top: 30px;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .process-steps:before {
+                left: 40px;
+                right: auto;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                height: auto;
+            }
+            
+            .process-step {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                padding-left: 100px;
+            }
+            
+            .process-step-number {
+                position: absolute;
+                left: 0;
+                margin: 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .process-step {
+                padding-left: 70px;
+            }
+            
+            .process-step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.2rem;
+            }
+            
+            .process-steps:before {
+                left: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/FINAL - LET'S ICON + Stacked 500x500-2-0.png" alt="Let's Talk Solutions Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li class="active"><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services-hero">
+        <div class="container">
+            <h1>My Services</h1>
+            <p>Comprehensive Atlassian consulting services tailored to your specific needs.</p>
+        </div>
+    </section>
+
+    <section id="platform" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content animate-on-scroll">
+                <div class="service-detail-text">
+                    <div class="service-number">01</div>
+                    <h2>Atlassian Platform Consultation</h2>
+                    <p>Expert guidance on Atlassian product selection, implementation, configuration, and optimization for your specific business needs.</p>
+                    <p>Whether you're just getting started with Atlassian tools or looking to optimize your existing setup, I provide tailored consultation services to help you get the most out of your investment.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Product selection guidance based on your specific requirements</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Implementation planning and execution</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Custom configuration to match your workflows</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Performance optimization for existing installations</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>User training and adoption strategies</span>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="service-detail-image">
+                    <img src="assets/platform-consultation.svg" alt="Atlassian Platform Consultation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content reverse animate-on-scroll">
+                <div class="service-detail-text">
+                    <div class="service-number">02</div>
+                    <h2>Workflow Optimization</h2>
+                    <p>Streamline your team's processes with custom workflows, automation rules, and integrations that boost productivity.</p>
+                    <p>I help teams identify bottlenecks in their current processes and implement solutions that streamline workflows, reduce manual tasks, and improve overall efficiency.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Workflow analysis and bottleneck identification</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Custom workflow design and implementation</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Automation rule setup to reduce manual tasks</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Process documentation and standardization</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Continuous improvement strategies</span>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="service-detail-image">
+                    <img src="assets/workflow-optimization.svg" alt="Workflow Optimization">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="integration" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content animate-on-scroll">
+                <div class="service-detail-text">
+                    <div class="service-number">03</div>
+                    <h2>Systems Integration</h2>
+                    <p>Connect your Atlassian tools with other business systems for seamless data flow and enhanced collaboration.</p>
+                    <p>I specialize in integrating Atlassian products with your existing business systems to create a cohesive ecosystem where information flows seamlessly between platforms.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Integration assessment and planning</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>API and webhook implementation</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Third-party app selection and configuration</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Custom integration development</span>
+                        </div>
+                        <div class="service-feature">
+                            <span class="service-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Data synchronization and validation</span>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="service-detail-image">
+                    <img src="assets/systems-integration.svg" alt="Systems Integration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail">
+        <div class="container">
+            <h2 class="section-title">My Approach</h2>
+            <p class="text-center">I follow a structured approach to ensure successful outcomes for all projects.</p>
+            
+            <div class="process-steps animate-on-scroll">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <h3 class="process-step-title">Discover</h3>
+                    <p class="process-step-description">Understanding your needs, challenges, and goals through in-depth consultation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <h3 class="process-step-title">Plan</h3>
+                    <p class="process-step-description">Developing a tailored strategy and roadmap for implementation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <h3 class="process-step-title">Implement</h3>
+                    <p class="process-step-description">Executing the plan with careful attention to detail and best practices.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">4</div>
+                    <h3 class="process-step-title">Optimize</h3>
+                    <p class="process-step-description">Refining the solution based on feedback and measuring results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to optimize your Atlassian ecosystem?</h2>
+            <p>Let's work together to unlock the full potential of your Atlassian tools.</p>
+            <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/FINAL - LET'S ICON 500x500_icon.png" alt="Let's Talk Solutions Logo">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="services.html">Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:contact@letstalksolutions.co.uk">contact@letstalksolutions.co.uk</a></li>
+                            <li>London, United Kingdom</li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Let's Talk Solutions Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
