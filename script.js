@@ -1,5 +1,17 @@
 // JavaScript for Let's Talk Solutions website
 
+function isValidEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports.isValidEmail = isValidEmail;
+}
+
+if (typeof document !== 'undefined') {
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -183,10 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
             input.classList.add('error');
         }
         
-        function isValidEmail(email) {
-            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(String(email).toLowerCase());
-        }
     }
     
     // FAQ accordion
@@ -252,3 +260,4 @@ function getCookie(name) {
     return null;
 }
 
+}
