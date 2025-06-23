@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
-  <!-- Hero Image -->
-  <rect x="100" y="100" width="600" height="400" rx="20" fill="none" stroke="#ffffff" stroke-width="2"/>
-  <path d="M 100 300 L 250 200 L 350 350 L 500 150 L 700 300" stroke="#ffffff" stroke-width="3" fill="none"/>
-  <circle cx="250" cy="200" r="15" fill="#dc2828"/>
-  <circle cx="350" cy="350" r="15" fill="#ffffff"/>
-  <circle cx="500" cy="150" r="15" fill="#dc2828"/>
-  <text x="400" y="450" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Atlassian Solutions</text>
-</svg>
