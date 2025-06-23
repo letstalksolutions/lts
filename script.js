@@ -1,5 +1,17 @@
 // JavaScript for Let's Talk Solutions website
 
+function isValidEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports.isValidEmail = isValidEmail;
+}
+
+if (typeof document !== 'undefined') {
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -183,10 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
             input.classList.add('error');
         }
         
-        function isValidEmail(email) {
-            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(String(email).toLowerCase());
-        }
     }
     
     // FAQ accordion
@@ -237,7 +245,8 @@ function setCookie(name, value, days) {
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         expires = "; expires=" + date.toUTCString();
-    }
+}
+ LW-4-create-a-linkedin-url-page
     // Add Secure and SameSite=Lax attributes for enhanced security
     document.cookie = name + "=" + (value || "")  + expires + "; path=/; Secure; SameSite=Lax";
 }
@@ -245,10 +254,12 @@ function setCookie(name, value, days) {
 function getCookie(name) {
     const nameEQ = name + "=";
     const ca = document.cookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
+    for(let i = 0; i < ca.length; i++) {LW-4-create-a-linkedin-url-page
         let c = ca[i].trim();
         if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
     }
     return null;
 }
 
+}
+main
